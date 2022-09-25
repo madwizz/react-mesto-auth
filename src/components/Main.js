@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 
 import pencilPath from "../images/pencil.svg";
 import plusButtonPath from "../images/plus-button.svg";
@@ -14,7 +14,7 @@ function Main({
   onCardDelete,
   cards,
 }) {
-  const currentUser = React.useContext(CurrentUserContext);
+  const currentUser = useContext(CurrentUserContext);
 
   return (
     <main className="main">
