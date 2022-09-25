@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 import Header from "./Header";
 import Main from "./Main";
@@ -12,22 +12,20 @@ import { api } from "../utils/Api";
 import ConfirmDeletePopup from "./ConfirmDeletePopup";
 
 function App() {
-  const [isEditProfilePopupOpen, setIsEditProfilePopupOpen] =
-    React.useState(false);
-  const [IsAddPlacePopupOpen, setIsAddPlacePopupOpen] = React.useState(false);
-  const [isEditAvatarPopupOpen, setIsEditAvatarPopupOpen] =
-    React.useState(false);
-  const [isImagePopupOpen, setIsImagePopupOpen] = React.useState(false);
-  const [selectedCard, setSelectedCard] = React.useState({});
+  const [isEditProfilePopupOpen, setIsEditProfilePopupOpen] = useState(false);
+  const [IsAddPlacePopupOpen, setIsAddPlacePopupOpen] = useState(false);
+  const [isEditAvatarPopupOpen, setIsEditAvatarPopupOpen] = useState(false);
+  const [isImagePopupOpen, setIsImagePopupOpen] = useState(false);
+  const [selectedCard, setSelectedCard] = useState({});
 
-  const [currentUser, setCurrentUser] = React.useState({});
-  const [cards, setCards] = React.useState([]);
+  const [currentUser, setCurrentUser] = useState({});
+  const [cards, setCards] = useState([]);
 
   const [isConfirmDeletePopupOpen, setIsConfirmDeletePopupOpen] =
-    React.useState(false);
-  const [deletedCard, setDeletedCard] = React.useState({});
+    useState(false);
+  const [deletedCard, setDeletedCard] = useState({});
 
-  React.useEffect(() => {
+  useEffect(() => {
     Promise.all([api.getUserInfo(), api.getInitialCards()])
       .then(([userInfo, cards]) => {
         setCurrentUser(userInfo);
