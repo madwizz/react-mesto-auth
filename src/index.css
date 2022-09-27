@@ -6,6 +6,9 @@
 
 @import url(./blocks/header/header.css);
 @import url(./blocks/header/__logo/header__logo.css);
+@import url(./blocks/header/__container/header__container.css);
+@import url(./blocks/header/__email/header__email.css);
+@import url(./blocks/header/__link/header__link.css);
 
 @import url(./blocks/main/main.css);
 
@@ -18,6 +21,7 @@
 @import url(./blocks/popup/__content/popup__content.css);
 @import url(./blocks/popup/__photo-content/popup__photo-content.css);
 @import url(./blocks/popup/__form/popup__form.css);
+@import url(./blocks/popup/__tooltip/popup__tooltip.css);
 
 @import url(./blocks/popup/__error-message-container/popup__error-message-container.css);
 @import url(./blocks/popup/__error-message/popup__error-message.css);
@@ -58,6 +62,11 @@
 @import url(./blocks/popup/__title/_delete/popup__title_delete.css);
 @import url(./blocks/popup/__close-button/_delete/popup__close-button_delete.css);
 
+@import url(./blocks/popup/__status-container/popup__status-container.css);
+@import url(./blocks/popup/__tooltip-img/popup__tooltip-img.css);
+@import url(./blocks/popup/__tooltip-title/popup__tooltip-title.css);
+@import url(./blocks/popup/__close-button/_tooltip/popup__close-button_tooltip.css);
+
 @import url(./blocks/places/places.css);
 
 @import url(./blocks/place/place.css);
@@ -71,5 +80,16 @@
 
 @import url(./blocks/place/__like-container/place__like-container.css);
 @import url(./blocks/place/__likes-count/place__like-count.css);
+
+@import url(./blocks/auth/auth.css);
+@import url(./blocks/auth/__button/auth__button.css);
+@import url(./blocks/auth/__form/auth__form.css);
+@import url(./blocks/auth/__input/auth__input.css);
+@import url(./blocks/auth/__input/_email/auth__input_email.css);
+@import url(./blocks/auth/__input/_password/auth__input_password.css);
+@import url(./blocks/auth/__title/auth__title.css);
+@import url(./blocks/auth/__container/auth__container.css);
+@import url(./blocks/auth/__caption/auth__caption.css);
+@import url(./blocks/auth/__sign-in/auth__sign-in.css);
 
 @import url(./blocks/footer/footer.css);
