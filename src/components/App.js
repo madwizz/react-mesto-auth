@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useCallback } from "react";
-import { Routes, Route, useNavigate, Navigate } from "react-router-dom";
+import { Routes, Route, useNavigate } from "react-router-dom";
 
 import Header from "./Header";
 import Main from "./Main";
@@ -37,13 +37,15 @@ function App() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    Promise.all([api.getUserInfo(), api.getInitialCards()])
-      .then(([userInfo, cards]) => {
-        setCurrentUser(userInfo);
-        setCards(cards);
-      })
-      .catch((error) => console.log(error));
-  }, []);
+    if (!isLogged) {
+      Promise.all([api.getUserInfo(), api.getInitialCards()])
+        .then(([userInfo, cards]) => {
+          setCurrentUser(userInfo);
+          setCards(cards);
+        })
+        .catch((error) => console.log(error));
+    }
+  }, [isLogged]);
 
   const handleCardClick = (card) => {
     setSelectedCard(card);
@@ -148,7 +150,7 @@ function App() {
     auth
       .register(email, password)
       .then(() => {
-        navigate("/sign-in");
+        navigate("/signin");
         setIsRegister(true);
       })
       .catch((error) => {
@@ -159,17 +161,17 @@ function App() {
   };
 
   const handleSignOut = () => {
-    localStorage.removeItem("jwt");
+    localStorage.removeItem("token");
     setIsLogged(false);
     setUserEmail("");
     navigate("/*");
   };
 
   const tokenCheck = useCallback(() => {
-    const jwt = localStorage.getItem("jwt");
-    if (jwt) {
+    const token = localStorage.getItem("token");
+    if (token) {
       auth
-        .getContent(jwt)
+        .getContent(token)
         .then((res) => {
           if (res) {
             setIsLogged(true);
@@ -188,12 +190,6 @@ function App() {
   useEffect(() => {
     tokenCheck();
   }, [tokenCheck]);
-
-  useEffect(() => {
-    if (isLogged) {
-      navigate("/*");
-    }
-  }, [isLogged, navigate]);
 
   return (
     <CurrentUserContext.Provider value={currentUser}>
@@ -221,12 +217,6 @@ function App() {
             element={<Register onRegister={handleRegister} />}
           />
           <Route path="/signin" element={<Login onLogin={handleLogin} />} />
-          <Route
-            path="/*"
-            element={
-              isLogged ? <Navigate to="/*" /> : <Navigate to="/signin" />
-            }
-          />
         </Routes>
         <Footer />
 

@@ -45,12 +45,12 @@ function Main({
             <p className="profile__title">{currentUser.about}</p>
           </div>
         </div>
-        <button className="profile__add-button" type="button">
-          <img
-            src={plusButtonPath}
-            alt="профиль-кнопка-добавить"
-            onClick={onAddPlace}
-          />
+        <button
+          className="profile__add-button"
+          type="button"
+          onClick={onAddPlace}
+        >
+          <img src={plusButtonPath} alt="профиль-кнопка-добавить" />
         </button>
       </section>
       <section className="places">

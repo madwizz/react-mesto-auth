@@ -1,16 +1,23 @@
 .footer {
-  max-width: 318px;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 22px;
-  color: #545454;
-  padding: 67px 0 60px 200px;
+  padding: 67px 0 60px 0;
+  max-width: 880px;
+  margin: auto;
 }
-@media screen and (max-width: 767px) and (min-width: 320px) {
+@media screen and (max-width: 950px) {
   .footer {
-    max-width: 282px;
-    font-size: 14px;
-    line-height: 17px;
-    padding: 48px 19px 36px 19px;
+    max-width: 70%;
+  }
+}
+
+@media screen and (max-width: 730px) {
+  .footer {
+    max-width: 90%;
+    padding-bottom: 110px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .footer {
+    padding: 48px 0 36px 0;
   }
 }

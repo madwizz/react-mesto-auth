@@ -36,7 +36,7 @@ const Card = ({
             className={cardLikeButtonClassName}
             type="button"
             onClick={() => onCardLike(card)}
-          ></button>
+          />
           <p className="place__likes-count">{likesCount}</p>
         </div>
       </div>
@@ -44,7 +44,7 @@ const Card = ({
         className={cardDeleteButtonClassName}
         type="button"
         onClick={() => onCardDelete(card)}
-      ></button>
+      />
     </article>
   );
 };

@@ -3,7 +3,9 @@ import React from "react";
 function Footer() {
   return (
     <footer className="footer">
-      &copy; {new Date().getFullYear()} Mesto Russia
+      <div className="footer__copyright">
+        &copy; {new Date().getFullYear()} Mesto Russia
+      </div>
     </footer>
   );
 }
