@@ -15,11 +15,13 @@ function PopupWithForm({
         onClose();
       }
     }
-    document.addEventListener("keydown", handleEscClose);
-    return () => {
-      document.removeEventListener("keydown", handleEscClose);
-    };
-  }, [onClose]);
+    if (isOpen) {
+      document.addEventListener("keydown", handleEscClose);
+      return () => {
+        document.removeEventListener("keydown", handleEscClose);
+      };
+    }
+  }, [isOpen]);
 
   return (
     <section className={`popup popup_${name} ${isOpen ? "popup_opened" : ""}`}>

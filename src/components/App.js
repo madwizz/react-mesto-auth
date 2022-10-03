@@ -240,7 +240,7 @@ function App() {
 
         <AddPlacePopup
           isOpen={IsAddPlacePopupOpen}
-          onCLose={closeAllPopups}
+          onClose={closeAllPopups}
           onAddPlace={handleAddPlaceSubmit}
         />
 
