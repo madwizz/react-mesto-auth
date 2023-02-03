@@ -1,70 +1,51 @@
-# Getting Started with Create React App
+# Project work: "Mesto"
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## A typical one-page site, adapted for desktop and mobile devices. Created as part of a study at Yandex.Praktikum on a web development course. 
 
-## Available Scripts
+### The work uses advanced HTML, CSS and JavaScript.
 
-In the project directory, you can run:
+![mesto](https://user-images.githubusercontent.com/101938387/216568862-7de6e297-0b53-4332-bb9e-9678fadbffde.gif)
 
-### `npm start`
+This version of Mesto was refactored with the use of JSX and React.js. Sign-in and Sign-up are added.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+You can: edit your avatar, name and bio, add photos and like them.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Technologies: 
+* Figma
+* BEM
+* BEM Nested
+* Flexbox
+* Grid Layout
+* React.js
 
-### `npm test`
+### Languages: 
+* HTML 
+* CSS
+* JSX / JS
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+**Figma**
 
-### `npm run build`
+* [Figma](https://www.figma.com/file/2cn9N9jSkmxD84oJik7xL7/JavaScript.-Sprint-4?node-id=0%3A1)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# Проектная работа: Место
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+**Описание**
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Одностраничный сайт, адаптированный под десктоп и мобильные устройства. Реализована возможность открывать форму и изменять данные профиля. Проект выполнен в рамках учебы в Яндекс.Практикум на факультете "Веб-разработчик".
 
-### `npm run eject`
+### Технологии
+* Figma
+* BEM
+* BEM Nested
+* Flexbox
+* Grid Layout
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Стек
+* HTML
+* CSS
+* JavaScript
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+**Figma**
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+* [Figma](https://www.figma.com/file/2cn9N9jSkmxD84oJik7xL7/JavaScript.-Sprint-4?node-id=0%3A1)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
